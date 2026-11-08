@@ -2,7 +2,7 @@
 Лабораторная работа №4
 
 **Тема:** Анализ набора данных с помощью SQL  
-**Предметная область примера:** образовательная платформа 
+**Предметная область примера:** образовательная платформа  
 **СУБД:** SQLite  
 **Файл базы:** `dataset.sqlite`
 
@@ -35,7 +35,7 @@ SELECT 'groups' AS table_name, COUNT(*) AS rows_count FROM groups UNION ALL SELE
 | `enrollments` | Записи на курсы | `id`, `student_id`, `course_id`, `enrolled_at`, `status` | 1000 |
 | `results` | Результаты обучения | `id`, `enrollment_id`, `score`, `completed_at` | 850 |
 
-Связи: students.group_id → groups.id; courses.teacher_id → teachers.id; enrollments.student_id → students.id; enrollments.course_id → courses.id; results.enrollment_id → enrollments.id. В каждой таблице id — первичный ключ. Для results.enrollment_id задана уникальность: одной записи на курс соответствует максимум один результат с оценкой.
+Связи: `students.group_id → groups.id`; `courses.teacher_id → teachers.id`; `enrollments.student_id → students.id`; `enrollments.course_id → courses.id`; `results.enrollment_id → enrollments.id`. В каждой таблице `id` — первичный ключ. Для `results.enrollment_id` задана уникальность: одной записи на курс соответствует максимум один результат с оценкой.
 
 **Просмотр данных.** Просмотр первых пяти записей на курсы.
 
@@ -47,7 +47,7 @@ SELECT * FROM rentals LIMIT 5;
 
 ![Шаг 2 — просмотр данных](images/step02_preview.png)
 
-*Структура таблицы.** Просмотр полей и типов данных таблицы `enrollments`.
+**Структура таблицы.** Просмотр полей и типов данных таблицы `enrollments`.
 
 ```sql
 PRAGMA table_info(enrollments);
