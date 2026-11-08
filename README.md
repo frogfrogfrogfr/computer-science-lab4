@@ -225,7 +225,6 @@ SELECT c.course_name, COUNT(r.score) AS total_grades,     ROUND(AVG(r.score), 2)
 
 ![Шаг 7 — аналитика по категориям](images/step07_courses.png)
 
-
 **Дополнительная проверка — курсы без оценок:**
 
 **Неиспользуемые курсы.** Используем `LEFT JOIN` для поиска учебных курсов без единой записи в `results`.
